@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#ffffff" />
+  <title>소스 레시피</title>
+
+  <link rel="manifest" href="./manifest.webmanifest" />
+  <link rel="apple-touch-icon" href="./assets/icons/icon-192.png" />
+  <link rel="stylesheet" href="./css/styles.css" />
+</head>
+<body>
+  <div class="app" id="app">
+    <header class="topbar">
+      <div class="topbar__left">
+        <div class="brand">
+          <div class="brand__mark" aria-hidden="true">◆</div>
+          <div class="brand__text">
+            <div class="brand__title" id="appTitle">소스 레시피</div>
+            <div class="brand__subtitle" id="appSubtitle">영지 · 마크 · 건희 · 런쥔</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="topbar__right">
+        <button class="icon-btn" id="btnSettings" aria-label="설정">⚙</button>
+      </div>
+    </header>
+
+    <main class="content" id="appRoot" role="main"></main>
+
+    <nav class="tabbar" aria-label="하단 탭">
+      <a class="tab" href="#/home" data-route="/home" aria-label="홈">
+        <span class="tab__icon" aria-hidden="true">🏠</span>
+        <span class="tab__label">홈</span>
+      </a>
+      <a class="tab" href="#/tasks" data-route="/tasks" aria-label="할 일">
+        <span class="tab__icon" aria-hidden="true">✅</span>
+        <span class="tab__label">할 일</span>
+      </a>
+      <a class="tab" href="#/settings" data-route="/settings" aria-label="설정">
+        <span class="tab__icon" aria-hidden="true">⚙️</span>
+        <span class="tab__label">설정</span>
+      </a>
+    </nav>
+
+    <div class="toast" id="toast" role="status" aria-live="polite" aria-atomic="true"></div>
+  </div>
+
+  <script type="module" src="./js/app.js"></script>
+</body>
+</html>
