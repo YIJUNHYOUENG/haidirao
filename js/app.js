@@ -1,8 +1,7 @@
 import { createRouter } from "./router.js";
 import { store } from "./store.js";
 import { HomeView } from "./views/home.js";
-import { TasksView } from "./views/tasks.js";
-import { SettingsView } from "./views/settings.js";
+import { IngredientsView } from "./views/ingredients.js";
 import { SauceDetailView } from "./views/sauce-detail.js";
 
 const appRoot = document.getElementById("appRoot");
@@ -20,9 +19,8 @@ function toast(msg) {
 }
 
 const routes = {
-  "/home": () => HomeView(),
-  "/tasks": () => TasksView({ toast }),
-  "/settings": () => SettingsView({ toast }),
+  "/sauces": () => HomeView(),
+  "/ingredients": () => IngredientsView(),
   "/sauce/:id": (params) => SauceDetailView({ index: params.id }),
 };
 
@@ -34,7 +32,10 @@ function syncHeader() {
 }
 
 function setActiveTab(path) {
-  const tabPath = path.startsWith("/sauce/") ? "/home" : path;
+  const tabPath = path.startsWith("/sauce/")
+    ? "/sauces"
+    : path;
+
   document.querySelectorAll(".tab").forEach((t) => {
     t.classList.toggle("is-active", t.dataset.route === tabPath);
   });

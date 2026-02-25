@@ -1,4 +1,4 @@
-const CACHE_NAME = "mobile-web-shell-final-v1";
+const CACHE_NAME = "mobile-web-shell-final-v2";
 const ASSETS = [
   "./",
   "./index.html",
@@ -8,8 +8,7 @@ const ASSETS = [
   "./js/store.js",
   "./js/views/home.js",
   "./js/views/sauce-detail.js",
-  "./js/views/tasks.js",
-  "./js/views/settings.js",
+  "./js/views/ingredients.js",
   "./manifest.webmanifest"
 ];
 
