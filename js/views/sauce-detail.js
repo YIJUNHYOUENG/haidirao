@@ -82,7 +82,7 @@ export function SauceDetailView({ index }) {
           <h2 class="h1" style="margin:0;">${escapeHtml(sauce.title)}</h2>
           <p class="p">${escapeHtml(sauce.desc)}</p>
         </div>
-        <a href="#/home" class="pill">← 홈</a>
+        <a href="#/sauce" class="pill">← 홈</a>
       </div>
     </div>
 
