@@ -61,5 +61,9 @@ if ("serviceWorker" in navigator) {
   navigator.serviceWorker.register("./sw.js").catch(() => {});
 }
 
+if (!location.hash) {
+  location.hash = "#/sauces";
+}
+
 router.render();
 syncHeader();
